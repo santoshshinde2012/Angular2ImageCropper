@@ -5,6 +5,11 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+
+# [angular2-img-cropper](https://github.com/cstefanache/angular2-img-cropper)
+
+Please check above module for implementation of image cropper
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
