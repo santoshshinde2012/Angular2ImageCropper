@@ -1,3 +1,33 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-6">
+       <h3>Sample cropper 1</h3>
+       <img-cropper [image]="data1"
+                    [settings]="cropperSettings1"
+                    (onCrop)="cropped($event)">
+       </img-cropper>
+       <br>
+       <span class="result" *ngIf="data1.image">
+       <img [src]="data1.image" [width]="cropperSettings1.croppedWidth" [height]="cropperSettings1.croppedHeight">
+       </span>
+    </div>
+    <div class="col-sm-6 col-md-6">
+       <h3>
+          Sample cropper 2
+          <div class="file-upload">
+             <span class="text">upload</span>
+             <input id="custom-input" type="file" (change)="fileChangeListener($event)">
+          </div>
+       </h3>
+       <img-cropper #cropper [image]="data2"
+                   [settings]="cropperSettings2">
+       </img-cropper>
+       <br>
+       <span class="result rounded" *ngIf="data2.image">
+       <img [src]="data2.image"
+            [width]="cropperSettings2.croppedWidth"
+            [height]="cropperSettings2.croppedHeight">
+       </span>
+    </div>
+  </div>
+</div>
